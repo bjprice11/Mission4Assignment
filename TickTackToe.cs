@@ -4,7 +4,7 @@ public class TickTackToe
 {
     private string[] board = new string[9] { " ", " ", " ", " ", " ", " ", " ", " ", " " };
     
-    public void UpdateBoard(int position, int player)
+    public bool UpdateBoard(int position, int player)
     {
         if (player == 1)
                 board[position] = "X";
@@ -13,8 +13,8 @@ public class TickTackToe
             board[position] = "O";
         }
         
-        
         PrintBoard(board);
+        return CheckWinner(board);
     }
 
     public void PrintBoard(string[] board)
