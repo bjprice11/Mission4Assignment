@@ -28,6 +28,7 @@ do
             validMove = true;
         }
     }
+    
     if (tt.UpdateBoard(playerOneChoice, playerOne))
     {
         Console.WriteLine("Player One Wins!");
@@ -51,7 +52,7 @@ do
             validMove = true;
         }
     }
-    if (tt.UpdateBoard(playerTwoChoice, playerTwo))
+    if (tt.UpdateBoard(playerOneChoice, playerOne))
     {
         Console.WriteLine("Player Two Wins!");
         winner = true;
