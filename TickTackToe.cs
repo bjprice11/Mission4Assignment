@@ -53,11 +53,7 @@ public class TickTackToe
         {
             winner = true;
         }
-
-        else
-        {
-            winner = false;
-        }
+        
 
         return winner;
     }
