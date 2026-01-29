@@ -36,11 +36,20 @@ do
     }
     
     //Passes the players choice and the player to the method, getting a boolean back
-    if (tt.UpdateBoard(playerOneChoice, playerOne))
+    if (tt.UpdateBoard(playerOneChoice, playerOne) == 1)
     {
         Console.WriteLine("Player One Wins!");
         winner = true;
         break; // Break the main game loop
+    }
+    else if (tt.UpdateBoard(playerOneChoice, playerOne) == 2)
+    {
+        Console.WriteLine("Its a Tie!");
+        winner = true;
+    }
+    else
+    {
+        winner = false;
     }
     
     //resets the valid move to make sure they are picking correct places
@@ -65,11 +74,20 @@ do
         }
     }
     //Passes the players choice and the player to the method, getting a boolean back
-    if (tt.UpdateBoard(playerTwoChoice, playerTwo))
+    if (tt.UpdateBoard(playerOneChoice, playerOne) == 1)
     {
         Console.WriteLine("Player Two Wins!");
         winner = true;
         break; // Break the main game loop
+    }
+    else if (tt.UpdateBoard(playerOneChoice, playerOne) == 2)
+    {
+        Console.WriteLine("Its a Tie!");
+        winner = true;
+    }
+    else
+    {
+        winner = false;
     }
     
 
