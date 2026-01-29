@@ -38,37 +38,34 @@ public class TickTackToe
     {
         //set winner to false until a winner is declared
         int winner = 3;
-
-        if (!board.Contains(" "))
-        {
-            //hroizontal winning positions
-            if ((board[0] != " " && board[0] == board[1] && board[1] == board[2]) ||
-                (board[3] != " " && board[3] == board[4] && board[4] == board[5]) ||
-                (board[6] != " " && board[6] == board[7] && board[7] == board[8]))
-            {
-                winner = 1;
-            }
-            // vertical winning positions
-            else if ((board[0] != " " && board[0] == board[3] && board[3] == board[6]) ||
-                     (board[1] != " " && board[1] == board[4] && board[4] == board[7]) ||
-                     (board[2] != " " && board[2] == board[5] && board[5] == board[8]))
-            {
-                winner = 1;
-            } 
-            // diagonal winner positions
-            else if ((board[0] != " " && board[0] == board[4] && board[4] == board[8]) ||
-                     (board[2] != " " && board[2] == board[4] && board[4] == board[6]))
-            {
-                winner = 1;
-            }
-            
-            else
-            {
-                winner = 2;
-            }
-        }
         
-        //return the int
+        //hroizontal winning positions
+        if ((board[0] != " " && board[0] == board[1] && board[1] == board[2]) ||
+            (board[3] != " " && board[3] == board[4] && board[4] == board[5]) ||
+            (board[6] != " " && board[6] == board[7] && board[7] == board[8]))
+        {
+            winner = 1;
+        }
+        // vertical winning positions
+        else if ((board[0] != " " && board[0] == board[3] && board[3] == board[6]) ||
+            (board[1] != " " && board[1] == board[4] && board[4] == board[7]) ||
+            (board[2] != " " && board[2] == board[5] && board[5] == board[8]))
+        {
+            winner = 1;
+        } 
+        // diagonal winner positions
+        else if ((board[0] != " " && board[0] == board[4] && board[4] == board[8]) ||
+            (board[2] != " " && board[2] == board[4] && board[4] == board[6]))
+        {
+            winner = 1;
+        }
+
+        else if (!board.Contains(" "))
+        {
+            winner = 2;
+        }
+            
+        //return bool
         return winner;
     }
 }
